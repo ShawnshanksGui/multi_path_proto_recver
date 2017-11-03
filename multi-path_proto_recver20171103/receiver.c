@@ -1,4 +1,4 @@
-#define _GNU_SOURCE
+#define   _GNU_SOURCE
 #include "sys/syscall.h"
 
 #include "thread_core_affinity_set.h"
