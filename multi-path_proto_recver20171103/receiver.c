@@ -126,13 +126,13 @@ void *thread_work(void *args_work) {
 		}	
 	}
 
-    printf("received %d packets!!!\n", count_pkt);
+	printf("received %d packets!!!\n", count_pkt);
 
-    pid_t id_thread_child = syscall(SYS_gettid);
-    printf("\nID of the child thread is %d\n", id_thread_child);
+	pid_t id_thread_child = syscall(SYS_gettid);
+	printf("\nID of the child thread is %d\n", id_thread_child);
 	
 	gettimeofday(&endtime, NULL);
-   	time_past = 1000000*(endtime.tv_sec-starttime.tv_sec) + (endtime.tv_usec-starttime.tv_usec);	
+	time_past = 1000000*(endtime.tv_sec-starttime.tv_sec) + (endtime.tv_usec-starttime.tv_usec);	
 	printf("all packet finish receiving, received %lf Mbytes\n,\
             the time of cost is %lf us\n, the rate of receiving is %lf Mb/s\n", 
             (double)byte_receive/1000000.0, time_past, byte_receive/time_past);
