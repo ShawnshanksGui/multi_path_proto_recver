@@ -94,8 +94,8 @@ void *thread_work(void *args_work) {
 	int byte_receive = 0;
 
 	struct Args *args = (struct Args *)args_work;
-    struct Transmit *_transmit = transmit_new(args->type_proto_str); //pass type of transport protocol
-    struct Socket *_socket = _transmit->socket_new(args->addr_self_str,
+	struct Transmit *_transmit = transmit_new(args->type_proto_str); //pass type of transport protocol
+	struct Socket *_socket = _transmit->socket_new(args->addr_self_str,
                                                    args->port_self_str); 
 //set affinity between threads and cores 
 	affinity_set(args->id_core);
