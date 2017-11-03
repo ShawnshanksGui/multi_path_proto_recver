@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 
 	struct Transmit *_transmit = transmit_new(argv[1]);     //argv[1] ---> type of transport protocol
 
-    struct Socket *_socket = _transmit->socket_new(argv[2], argv[3]);  
+	struct Socket *_socket = _transmit->socket_new(argv[2], argv[3]);  
 
 	while (1) {
 		if ((recv_len = _transmit->_recv(_socket, ctp_buf, RECLINE)) > 0) {
